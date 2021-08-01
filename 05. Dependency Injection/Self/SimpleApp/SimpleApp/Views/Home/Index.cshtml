@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <table>
+        @foreach (var item in (List<string>)ViewData["serviceResult"])
+        {
+            <tr>
+                <td>@item</td>
+            </tr>
+        }
+    </table>
+    <p>
+        Создайте контроллер, который выводит пользователю список строковых значений. Сделайте
+        два сервиса, один который предоставляет массив названий дней недели, второй, который
+        предоставляет массив с названых месяцев. Реализуйте через DI передачу контроллеру одного
+        из сервисов, используемый сервис зависит от настроек DI.
+    </p>
+</body>
+</html>
+

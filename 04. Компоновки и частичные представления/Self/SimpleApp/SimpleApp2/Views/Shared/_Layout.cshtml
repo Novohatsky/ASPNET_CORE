@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+            <div>
+                <a asp-controller="home" asp-action="index">Главная</a>
+                <a asp-controller="Page" asp-action="Page1">Страница 1</a>
+                <a asp-controller="Page" asp-action="Page2">Страница 2</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="main">
+        @* Отображение содержимого (которое не входит в секции) связанного представления *@
+        @RenderBody()
+    </div>
+    <footer>
+        Задание 2
+        Создайте веб приложение, в котором будут использоваться вложенные компоновки.
+        Сделайте так, чтобы при переходе на представление «Страница 2» (из задания из раздела
+        «дополнительное задание») у Вас в представлении отображалось меню слева, дополнительно
+        к основному меню. При этом, в левом меню должно быть три пункта – Меню 1, Меню 2, Меню 3,
+        каждый пункт будет вести на отдельное представление с уникальным текстом. На всех этих
+        представлениях должно отображаться как левое меню, так и основное меню.
+    </footer>
+</body>
+</html>

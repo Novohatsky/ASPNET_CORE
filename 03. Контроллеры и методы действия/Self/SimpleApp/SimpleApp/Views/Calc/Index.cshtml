@@ -1,0 +1,24 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Калькулятор</title>
+</head>
+<body>
+    <form method="post">
+        <input type="text" name="arg1" value=@ViewData["arg1"] />
+        <button asp-action="Add" asp-controller="Calc" type="submit">+</button>
+        <button asp-action="Sub" asp-controller="Calc" type="submit">-</button>
+        <button asp-action="Mul" asp-controller="Calc" type="submit">*</button>
+        <button asp-action="Div" asp-controller="Calc" type="submit">/</button>
+        <input type="text" name="arg2" value=@ViewData["arg2"] />
+        <label> = </label>
+        <input type="text" name="calcResult" value=@ViewData["CalcResult"] />
+    </form>
+</body>
+</html>
