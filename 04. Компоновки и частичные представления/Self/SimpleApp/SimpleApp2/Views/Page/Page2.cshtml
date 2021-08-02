@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Страница 2";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Страница 2</p>
+
+@section Left {
+    @await Html.PartialAsync("_LeftMenu")
+}

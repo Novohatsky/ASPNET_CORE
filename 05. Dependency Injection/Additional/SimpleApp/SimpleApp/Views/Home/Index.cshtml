@@ -1,0 +1,30 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Калькулятор</title>
+</head>
+<body>
+    <form method="post">
+        <input type="text" name="arg1" value=@ViewData["arg1"] />
+        <button asp-action="Add" asp-controller="Home" type="submit">+</button>
+        <button asp-action="Sub" asp-controller="Home" type="submit">-</button>
+        <button asp-action="Mul" asp-controller="Home" type="submit">*</button>
+        <button asp-action="Div" asp-controller="Home" type="submit">/</button>
+        <input type="text" name="arg2" value=@ViewData["arg2"] />
+        <h2>@ViewData["CalcResult"]</h2>
+    </form>
+
+    <p>
+        Создайте контроллер, который выводит пользователю список строковых значений. Сделайте
+        два сервиса, один который предоставляет массив названий дней недели, второй, который
+        предоставляет массив с названых месяцев. Реализуйте через DI передачу контроллеру одного
+        из сервисов, используемый сервис зависит от настроек DI.
+    </p>
+</body>
+</html>

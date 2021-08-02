@@ -1,0 +1,19 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Контроллеры и методы действия</title>
+</head>
+<body>
+    <label>Browser: </label><label>@ViewData["Client"]</label><br />
+    <label>IP address: </label><label>@ViewData["IpAddress"]</label><br />
+    <br />
+    <br />
+    @Html.ActionLink("Калькулятор", "Index", "Calc")
+</body>
+</html>

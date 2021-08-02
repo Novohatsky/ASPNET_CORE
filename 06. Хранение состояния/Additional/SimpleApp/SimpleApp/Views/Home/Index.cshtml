@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/site.css" rel="stylesheet" />
+    <title>Cookies Sample</title>
+</head>
+<body>
+    <h1>Хранение состояния в cookies</h1>
+
+    <form asp-controller="Home" asp-action="index" method="post">
+        <div>
+            <label>Value</label>
+            <input type="text" name="value" value="@ViewData["value"]"/>
+            <label>DateTime</label>
+            <input type="datetime" name="expired" value="@ViewData["expired"]"/>
+        </div>
+        <div>
+            <input type="submit" />
+        </div>
+
+        <div>
+            <a asp-controller="Home" asp-action="test">Test View</a>
+        </div>
+    </form>
+
+    <p>
+        Создайте MVC приложение форму, на которой будет находиться два поля ввода, одно поле
+        ввода для значения, а второе поле ввода для установки даты и времени (можете использовать
+        HTML элемент управления) и кнопка, которая отправит данные на сервер. На сервере
+        полученная информация должна быть записана в Cookies с установкой даты устаревания
+        равной той, которая была установлена во втором поле ввода в форме. Сделайте страницу,
+        которая будет использоваться для проверки наличия значения в Cookies
+    </p>
+</body>
+</html>

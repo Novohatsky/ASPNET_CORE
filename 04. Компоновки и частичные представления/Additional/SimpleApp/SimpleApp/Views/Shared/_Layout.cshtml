@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+            <div>
+                <a asp-controller="home" asp-action="index">Главная</a>
+                <a asp-controller="home" asp-action="Page1">Страница 1</a>
+                <a asp-controller="home" asp-action="Page2">Страница 2</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="main">
+        @* Отображение содержимого (которое не входит в секции) связанного представления *@
+        @RenderBody()
+    </div>
+    <footer>
+        Создание пользовательского интерфейса в ASP.NET Core
+    </footer>
+</body>
+</html>
